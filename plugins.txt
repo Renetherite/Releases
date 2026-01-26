@@ -1,2 +1,1 @@
-PluginA
-PluginB
+PluginBase
