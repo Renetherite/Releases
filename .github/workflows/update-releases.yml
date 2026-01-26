@@ -1,0 +1,52 @@
+name: Update Plugin Releases
+
+on:
+  schedule:
+    # Run every 4 hours
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+    # Allow manual triggering
+
+jobs:
+  update-releases:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Read plugins list
+        id: read-plugins
+        run: |
+          plugins_content=$(cat plugins.txt)
+          plugins_array=$(echo "$plugins_content" | sed 's/$/,/' | tr -d '\n' | sed 's/,$//')
+          echo "plugins_list=$plugins_array" >> $GITHUB_OUTPUT
+
+      - name: Update releases
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PLUGINS_LIST: ${{ steps.read-plugins.outputs.plugins_list }}
+        run: |
+          node scripts/update-releases.js
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update plugin releases $(date '+%Y-%m-%d %H:%M:%S')"
+            git push
+          fi
