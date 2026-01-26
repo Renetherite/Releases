@@ -34,7 +34,7 @@ jobs:
 
       - name: Update releases
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PLUGIN_REPO_TOKEN }}
           PLUGINS_LIST: ${{ steps.read-plugins.outputs.plugins_list }}
         run: |
           node scripts/update-releases.js
