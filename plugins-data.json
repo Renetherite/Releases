@@ -1,0 +1,10 @@
+{
+  "lastUpdated": "2026-01-26T02:10:04.156Z",
+  "plugins": [
+    {
+      "name": "PluginBase",
+      "repository": "Renetherite/PluginBase",
+      "version": "No releases"
+    }
+  ]
+}
