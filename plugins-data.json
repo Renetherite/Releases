@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-31T04:04:40.300Z",
+  "lastUpdated": "2026-02-01T20:17:13.124Z",
   "plugins": [
     {
       "name": "PluginBase",
@@ -9,7 +9,7 @@
     {
       "name": "RePets",
       "repository": "Renetherite/RePets",
-      "version": "1.0.1"
+      "version": "1.0.2"
     },
     {
       "name": "ReBoosters",
