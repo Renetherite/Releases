@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-01T20:17:13.124Z",
+  "lastUpdated": "2026-02-03T01:43:34.723Z",
   "plugins": [
     {
       "name": "PluginBase",
@@ -14,6 +14,11 @@
     {
       "name": "ReBoosters",
       "repository": "Renetherite/ReBoosters",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ReNetwork",
+      "repository": "Renetherite/ReNetwork",
       "version": "1.0.0"
     }
   ]
