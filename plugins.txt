@@ -2,3 +2,4 @@ PluginBase
 RePets
 ReBoosters
 ReNetwork
+ReArmour
