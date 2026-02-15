@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-03T04:02:22.535Z",
+  "lastUpdated": "2026-02-15T17:19:13.390Z",
   "plugins": [
     {
       "name": "PluginBase",
@@ -20,6 +20,11 @@
       "name": "ReNetwork",
       "repository": "Renetherite/ReNetwork",
       "version": "1.2.1"
+    },
+    {
+      "name": "ReArmour",
+      "repository": "Renetherite/ReArmour",
+      "version": "1.0.0"
     }
   ]
 }
