@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-15T17:19:13.390Z",
+  "lastUpdated": "2026-05-30T14:52:00.640Z",
   "plugins": [
     {
       "name": "PluginBase",
@@ -24,7 +24,7 @@
     {
       "name": "ReArmour",
       "repository": "Renetherite/ReArmour",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   ]
 }
